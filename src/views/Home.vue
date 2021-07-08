@@ -14,6 +14,7 @@
               :src="require(`@/assets/${destination.image}`)"
               alt="destination.name"
             />
+            s
           </router-link>
         </figure>
       </div>
