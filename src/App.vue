@@ -1,11 +1,24 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/brazil">Brazil</router-link> |
+    <router-link to="/panama">Panama</router-link> |
+    <router-link to="/hawaii">Hawaii</router-link> |
+    <router-link to="/jamaica">Jamaica</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
-
+<script>
+import store from '@/store/index'
+export default {
+  name: 'App',
+  data () {
+    return {
+      brazil: store.destinations[0].name
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,7 +34,7 @@
   a {
     font-weight: bold;
     color: #2c3e50;
-
+    padding: 1rem;
     &.router-link-exact-active {
       color: #42b983;
     }
